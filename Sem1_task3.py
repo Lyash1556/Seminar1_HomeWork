@@ -4,7 +4,16 @@
 # т.к. 3+8+5=9+1+6. Вам требуется написать программу, которая проверяет счастливость билета.
 
 x = int(input('Input a tiket number: '))
-while n > 0:
-    t = n % 10
-    sum = sum + t
-    n = n // 10
+sum1 = 0
+sum2 = 0
+while x > 999:
+    t = x % 10
+    sum1 = sum1 + t
+    x = x // 10
+while x > 0:
+    t = x % 10
+    sum2 = sum2 + t
+    x = x // 10
+if sum1 == sum2:
+    print('Your tiket is HAPPY!!!')
+else: print('Tiket not happy (')
